@@ -12,6 +12,7 @@ int leftmost_one(unsigned x) {
     x |= x >> 8;
     x |= x >> 16;
     return ~(x >> 1) & x;
+    // (~x >> 1) fail because of the sign bit
 }
 
 int main(int argc, char* argv[]) {
